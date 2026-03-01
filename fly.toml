@@ -1,0 +1,13 @@
+# Fly.io - Telegram bot (polling, HTTP kerak emas)
+app = "telegram-file-bot"
+primary_region = "fra"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PYTHONUNBUFFERED = "1"
+
+# Telegram bot polling ishlatadi - HTTP port kerak emas.
+# Secretlar: fly secrets set BOT_TOKEN="..." ADMIN_GROUP_LINK="..."
+# [processes] va [[services]] yo'q - oddiy worker sifatida ishlaydi.
